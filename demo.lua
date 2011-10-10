@@ -1,3 +1,5 @@
+-- require "lib/encryption"
+
 local dlg = nil -- Account Dialog
 local user = nil -- Text input widget
 local pass = nil -- Password input widget
@@ -30,6 +32,8 @@ local function click_login()
         return
     end
 	vlc.msg.dbg("Click done")
+	
+	-- vlc.msg.dbg("Test: " .. sha1_hmac("key", "message"))
 end
 
 -- Create the dialog
